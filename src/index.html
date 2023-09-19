@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Golem</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    $(document).ready(function() {
+    document.querySelectorAll(".nav-item").forEach((element) => {
+        if (element.getElementsByTagName('a').href === window.location.href) {
+            element.classList.add("active");
+            element.getElementsByTagName('a').setAttribute("aria-current", "page");
+        }
+    });
+});
+
+  </script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
